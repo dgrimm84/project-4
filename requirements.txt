@@ -1,0 +1,5 @@
+streamlit
+tensorflow
+sklearn
+time
+pandas
