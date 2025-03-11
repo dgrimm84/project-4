@@ -10,7 +10,7 @@ import time  # Import time for better UI updates
 
 # Set the background of the Streamlit web app to the American Diabetes Association Logo URL
 # background_image_url = "https://diabetes.org/sites/default/files/ADA85_logo_full_RGB_0.svg"
-background_image_url = "/project-4/Resources/ADA_logo.svg"
+background_image_url = " ./project-4/Resources/ADA_logo.svg"
 
 # Set and inject CSS code to change the background to the image URL above
 st.markdown(
