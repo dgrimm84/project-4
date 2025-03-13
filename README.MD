@@ -39,7 +39,7 @@ High Blood Pressure
 - Education
 - Income
 
-For our calculations to predict the risk of diagnosis, we will examine all the following variables except for income and education. While we acknowledge that socioeconomic factors can influence general health outcomes, for our project, we have excluded Income and Education from our predictive calculations as they don’t contribute meaningfully to the prediction model.  
+For our calculations to predict the risk of diagnosis, we will examine all the following variables and train the model 
 
 In addition, our datasets contain records that indicate whether a patient has been diagnosed with diabetes. These records were derived from a variety of trusted data sources, including:
 - Centers for Disease Control and Prevention (CDC)
@@ -56,7 +56,9 @@ In addition, our datasets contain records that indicate whether a patient has be
 - U.S. Resident Population Estimates
 
 ## Data Clean-Up
-Given the BRFSS vast data, there were 330 columns of patient data, date and time surveys were taken, and other more unrelated data according to the CDC and diabetesatlas.org, we focused on 22 distinguishable factors best to predict the risk of a diagnosis of diabetes 
+Given the BRFSS vast data, there were 330 columns of patient data, date and time surveys were taken, and other more unrelated data according to the CDC and diabetesatlas.org, we focused on 21 distinguishable factors best to predict the risk of a diagnosis of diabetes.  But, when training the model the first time with all 250,000+ records, the prediction model consistently predicted low chance of diabetes no matter what the user inputted for the prediction.  This is because the two classes 0-No Diabetes and 1-Diabetes were way too imbalanced.  Even when all the factors that contribued to a positive Diabetes result, the model still predicted a near-zero chance just because the 0 result represented 84% of the dataset.
+
+We looked at several different ways to resolve this (value weights, Synthetic Oversampling Technique SMOTE, etc.), but with such a skewed and imbalanced dataset, even these 
 
 ## Machine Learning Predictive Model
 The main file in the repository for the predictive model is the app.py file.  In this file, the below steps are taken to create and run this predictive machine learning model:
