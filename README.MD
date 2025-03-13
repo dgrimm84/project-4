@@ -72,7 +72,7 @@ The model training file in this repository is train_model.py.  In this file, the
 
 The file that handles the prediction and creating the Streamlit GUI is called app.py.  It performs the below:
 - The model, scalar, and logging file are loaded into this file for use
-- 
+- the logging file is loaded and displayed at the top of the Streamlit page to show what each Epoch loaded at what accuracy rate
 - The column headers of the dataset are renamed into human-readable formats to be used later as user selections
 - Categories for Age and Sex are created to be used in selectable radio buttons
 - Streamlit is called, user inputs dictionaries are created, and fields are built for users to input Height and Weight (to calculate BMI), age, general health rating, gender, and selectable boxes with categories derived directly from the columns of the dataset
