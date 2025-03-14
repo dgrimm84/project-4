@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 numpy
 pandas
 scikit-learn
 streamlit
 tensorflow
-=======
-numpy
-pandas
-scikit-learn
-streamlit
-tensorflow
->>>>>>> b5f2b0cf48e8d4bc2b082042e232ec6fd2bc9bf6
+
