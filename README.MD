@@ -64,8 +64,11 @@ In addition, our datasets contain records that indicate whether a patient has be
 Given the BRFSS vast data, there were 330 columns of patient data, date and time surveys were taken, and other more unrelated data according to the CDC and diabetesatlas.org, we focused on 21 distinguishable factors best to predict the risk of a diagnosis of diabetes.  But, when training the model the first time with all 250,000+ records, the prediction model consistently predicted low chance of diabetes no matter what the user inputted for the prediction.  This is because the two classes 0-No Diabetes and 1-Diabetes were way too imbalanced.  Even when all the factors that contribued to a positive Diabetes result, the model still predicted a near-zero chance just because the 0 result represented 84% of the dataset.
 
 We looked at several different ways to resolve this (value weights, Synthetic Oversampling Technique SMOTE, etc.), but with such a skewed and imbalanced dataset, even these techniques did not compensate for the major class imbalance and the prediction result still always was close to 0.  So, to rectify this and simply showcase that the model worked with high accuracy, we tweaked the dataset CSV to have a more balanced class between 0 and 1 in the Diabetes_binary column.  It is now closer to 50/50.  Once this change was made, the prediction model behaved correctly.
+<<<<<<< HEAD
 
 We did create a Jupyter notebook named Clean Data.ipynb which cleans the CSV datasets which were used in the Tableau visualizations.  
+=======
+>>>>>>> 2222e3770f03e9118f1d9040221dd729c7afb518
 
 ## Machine Learning Predictive Model
 The model training file in this repository is train_model.py.  In this file, the below steps are taken to create and run this predictive machine learning model:
